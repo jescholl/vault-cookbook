@@ -52,6 +52,7 @@ module VaultCookbook
       attribute(:disable_mlock, equal_to: [true, false], default: false)
       attribute(:default_lease_ttl, kind_of: String)
       attribute(:max_lease_ttl, kind_of: String)
+      attribute(:ui, equal_to: [true, false], default: false)
       # Storage options
       attribute(:storage_type, default: 'inmem', equal_to: %w(consul etcd zookeeper dynamodb s3 mysql postgresql inmem file))
       attribute(:storage_options, option_collector: true)
